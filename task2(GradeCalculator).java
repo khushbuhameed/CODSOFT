@@ -1,58 +1,58 @@
 import java.util.Scanner;
 
-class rangen{
-    public int genrate(int max,int min){
-        return (int) (Math.random()*(max - min + 1) + min);
+class Range{
+    public int Generate(int maximum,  int minimum){
+        return (int) (Math.random()*(maximum - minimum + 1) + minimum);
     }
 }
 
 public class Main {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        rangen rg = new rangen();
-        int totalAttempts = 0;
+        Scanner s = new Scanner(System.in);
+        Range rg = new Range();
+        int TotalAttempts = 0;
         int win = 0;
 
         while (true) {
-            System.out.println("Enter the maximum number");
-            int max = sc.nextInt();
-            System.out.println("Enter the minimum number");
-            int min = sc.nextInt();
-            sc.nextLine();
+            System.out.println("Enter The Maximum Number:");
+            int maximum = s.nextInt();
+            System.out.println("Enter The Minimum Number:");
+            int minimum = s.nextInt();
+            s.nextLine();
 
-            int cnum = rg.genrate(max, min);
+            int cnum = rg.Generate(maximum, minimum);
             int attempts = 0;
 
             while (true) {
-                System.out.println("Guess a number between "+max+" and "+min);
-                int gnum = sc.nextInt();
+                System.out.println("Guess A Number Between " +maximum+ " and " +minimum);
+                int gnum = s.nextInt();
                 attempts++;
 
                 if (gnum > cnum) {
-                    System.out.println("Its Greater");
+                    System.out.println("It is Greater");
                 } else if (gnum < cnum){
-                    System.out.println("Its Lower");
+                    System.out.println("It is Lower");
                 }else{
-                    System.out.println("Correct Guess");
+                    System.out.println( " Wow..!! Correct Guess!!");
                     win++;
                     break;
                 }
             }
-            totalAttempts += attempts;
+            TotalAttempts +=attempts;
             System.out.println("Attempts = " + attempts);
             System.out.println("Wins = " + win);
 
-            double winrate = (double) win / totalAttempts*100;
-            System.out.printf("Your winrate is %.2f%%\n",winrate);
+            double winrate = (double) win / TotalAttempts * 100;
+            System.out.printf("Your Winrate is %.2f%%\n",winrate);
 
-            System.out.println("Do you want to play again (yes/no)");
-            String playAgain = sc.next();
+            System.out.println("Do you want to play again yes/no");
+            String playAgain = s.next();
             if(!playAgain.equalsIgnoreCase("yes")){
-                sc.close();
+                s.close();
                 System.exit(0);
             }
-            sc.nextLine();
+            s.nextLine();
         }
     }
 }
