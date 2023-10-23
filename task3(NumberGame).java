@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 class Grade{
-    public String grade(int avgp){
+    public String StudentGrade(int avgp){
         switch (avgp / 10) {
             case 10:
                 return "A+";
@@ -23,18 +23,18 @@ class Grade{
 
 public class Main{
     public static void main(String[] args){
-        Grade g = new Grade();
-        Scanner sc = new Scanner(System.in);
+        StudentGrade g = new StudentGrade();
+        Scanner s = new Scanner(System.in);
 
         
         System.out.println("Enter the amount of subjects");
-        int tsubs = sc.nextInt();
+        int tsubs = s.nextInt();
         int tmarks = 0;
 
     
         for (int i = 0; i < tsubs; i++) {
             System.out.println("Enter the marks obtained in subject " + (i + 1));
-            int marks = sc.nextInt();
+            int marks = s.nextInt();
             tmarks += marks;
         }
 
@@ -42,14 +42,14 @@ public class Main{
         int avgp = tmarks / tsubs;
 
         
-        String Grade = g.grade(avgp);
+        String StudentGrade = g.StudentGrade(avgp);
 
     
         System.out.println("Total marks obtained :- " + tmarks);
         System.out.println("Percentage obtained :- " + avgp+"%");
         System.out.println("Grade obtained :- " + Grade);
 
-        sc.close();
+        s.close();
         
     }
 }
