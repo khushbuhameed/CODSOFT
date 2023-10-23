@@ -1,8 +1,6 @@
 
-
-
-
-
+# CODSOFT
+Here I put all of task whatever i got from CODSOFT internship..!!
 ## Contributing
 
 Contributions are always welcome!
@@ -20,4 +18,4 @@ Please adhere to this project's `code of conduct`.
 Java...
 
 
-I put all of task whatever I got from CODSOFT Intership
+
