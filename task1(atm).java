@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class ATM {
 	
 	public static void main(String[] args) {
-		ATMop obj= new ATMop();
+		ATMop obj = new ATMop();
 		
 	}
 
@@ -52,25 +52,25 @@ class Data{
 	 System.out.println("4, Check Another Account");
 	 System.out.println("5, Exit");
 	 
-	 int x = s.nextInt();
+	 int k = s.nextInt();
 	 
-	 if(x==1) {
+	 if(k == 1) {
 		 Check_balance(obj);
 	 }
-	 else if(x == 2) {
+	 else if(k == 2) {
 		 deposit(obj);
 	 }
-	 else if(x == 3) {
+	 else if(k == 3) {
 		 withdraw(obj);
 	 }
-	 else if(x == 4) {
+	 else if(k == 4) {
 		 op();
 	 }
-	 else if(x == 5) {
-		 System.out.println("Thank You!");
+	 else if(k == 5) {
+		 System.out.println("Have A Good Day.. Thank You!!");
 	 }
 	 else {
-		 System.out.println("please enter valid number");
+		 System.out.println("please Enter Valid Number");
 		 menu(obj);
 	 }
 	 
@@ -78,7 +78,7 @@ class Data{
 	
 	public void Check_balance(Data obj) {
 	System.out.println("********************************************************");
-		System.out.println("Your balance " + obj.balance);
+		System.out.println("Your Balance  is" + obj.balance);
 		System.out.println("********************************************************");
 		menu(obj);
 	}
@@ -87,7 +87,7 @@ class Data{
 		System.out.println("Enter Your Amount:");
 		float a = s.nextFloat();
 		obj.balance = obj.balance + a;
-		System.out.println("Amount deposit Succeesfully ");
+		System.out.println("Amount deposit Succeesfully..!! ");
 		System.out.println("********************************************************");
 		menu(obj);
 	}
@@ -97,7 +97,7 @@ class Data{
 		float a = s.nextFloat();
 		if(obj.balance >= a) {
 			obj.balance = obj.balance - a;
-			System.out.println("Amount withdraw Succeesfully");
+			System.out.println("Amount withdraw Succeesfully...!!");
 		}else {
 		
 		System.out.println("Insufficient balance ");
